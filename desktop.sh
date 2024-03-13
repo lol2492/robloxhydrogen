@@ -116,8 +116,8 @@ main() {
 
   unzip_file "$HOME/hydrogen.zip" "$HOME/hydrogen_unzip" "Unzipping Hydrogen..." "Unzipped Hydrogen!" "Failed to unzip Hydrogen."
 
-  local hydrogen_app_path="/Mac SSD/Users/derrick930/Desktop/Hydrogen.app"
-  local roblox_app_path="/Mac SSD/Users/derrick930/Desktop/Roblox.app"
+  local hydrogen_app_path="/Users/derrick930/Desktop/Hydrogen.app"
+  local roblox_app_path="/Users/derrick930/Desktop/Roblox.app"
 
   [ -d "$hydrogen_app_path" ] && rm -rf "$hydrogen_app_path"
   [ -d "$roblox_app_path" ] && rm -rf "$roblox_app_path"
@@ -127,10 +127,10 @@ main() {
   mv "Roblox.app" "$roblox_app_path"
   chmod -R 777 "$roblox_app_path"
 
-  cp "$HOME/hydrogen_unzip/Hydrogen.app/Contents/Resources/libHydrogen.dylib" "/Mac SSD/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/libHydrogen.dylib"
-  cp "/Mac SSD/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/RobloxPlayer" "/Mac SSD/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/.RobloxPlayer"
+  cp "$HOME/hydrogen_unzip/Hydrogen.app/Contents/Resources/libHydrogen.dylib" "/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/libHydrogen.dylib"
+  cp "/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/RobloxPlayer" "/Mac SSD/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/.RobloxPlayer"
 
-  "$HOME/hydrogen_unzip/Hydrogen.app/Contents/Resources/insert_dylib" --strip-codesig --all-yes "/Mac SSD/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/libHydrogen.dylib" "/Mac SSD/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/.RobloxPlayer" "/Mac SSD/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/RobloxPlayer" >/dev/null 2>&1
+  "$HOME/hydrogen_unzip/Hydrogen.app/Contents/Resources/insert_dylib" --strip-codesig --all-yes "/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/libHydrogen.dylib" "/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/.RobloxPlayer" "/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/RobloxPlayer" >/dev/null 2>&1
 
   mv "$HOME/hydrogen_unzip/Hydrogen.app" "$hydrogen_app_path"
   chmod -R 777 "$hydrogen_app_path"
