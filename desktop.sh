@@ -128,7 +128,7 @@ main() {
   chmod -R 777 "$roblox_app_path"
 
   cp "$HOME/hydrogen_unzip/Hydrogen.app/Contents/Resources/libHydrogen.dylib" "/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/libHydrogen.dylib"
-  cp "/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/RobloxPlayer" "/Mac SSD/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/.RobloxPlayer"
+  cp "/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/RobloxPlayer" "/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/.RobloxPlayer"
 
   "$HOME/hydrogen_unzip/Hydrogen.app/Contents/Resources/insert_dylib" --strip-codesig --all-yes "/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/libHydrogen.dylib" "/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/.RobloxPlayer" "/Users/derrick930/Desktop/Roblox.app/Contents/MacOS/RobloxPlayer" >/dev/null 2>&1
 
